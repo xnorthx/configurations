@@ -24,7 +24,7 @@ Users are created via POST to /users with the required JSON payload:
 
 ```curl -X POST -s http://localhost:8000/users -d '{"name" : "joe", "password":"pass1234"}'```
 
-On success the reflects the user object back to you, with the password scrubbed: 
+On success this reflects the user object back to you, with the password scrubbed: 
 
 ```
 {
@@ -33,8 +33,7 @@ On success the reflects the user object back to you, with the password scrubbed:
 }
 ```
 #### Login a User
-Username/passwords are not used for authentication for API calls.  For that we use a session-based authToken.  To create an
-authToken, which is tied to a user, use the login command:
+Username/passwords are not used for authentication for API calls.  For that we use a session-based authToken.  To create an authToken, which is tied to a user, use the login command:
 
 ```
 curl -X POST -s http://localhost:8000/login -d '{"name" : "joe", "password":"pass1234"}'
@@ -168,7 +167,7 @@ Sorting is enabled for configuration fields.  A simple sort on hostname would lo
 curl -v -X GET -H "auth-token: 8ff82ad461794a" -s "http://localhost:8000/configurations/joe?sort=port"
 ```
 
-By default sorts are done in descending order.  TO make a sort ascending, simply prepent the sort field with a '^':
+By default sorts are done in descending order.  To make a sort ascending, simply prepend the sort field with a '^':
 
 ```
 curl -v -X GET -H "auth-token: 8ff82ad461794a" -s "http://localhost:8000/configurations/joe?sort=^port"

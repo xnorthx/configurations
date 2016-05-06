@@ -180,7 +180,7 @@ We can also sort by more than one field, which is helpful as ports and usernames
 sort=port,username
 ```
 
-Each individual directive support sorting too:
+Each individual directive supports sort ordering too:
 
 ```
 sort=port,^usename
